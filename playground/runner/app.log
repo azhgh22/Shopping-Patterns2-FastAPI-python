@@ -1,0 +1,232 @@
+2024-12-26 16:06:25,115 [INFO] uvicorn.error: Started server process [14788]
+2024-12-26 16:06:25,117 [INFO] uvicorn.error: Waiting for application startup.
+2024-12-26 16:06:25,119 [INFO] uvicorn.error: Application startup complete.
+2024-12-26 16:06:25,122 [INFO] uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2024-12-26 16:06:57,702 [INFO] uvicorn.access: 127.0.0.1:64195 - "GET /app HTTP/1.1" 404
+2024-12-26 16:06:58,018 [INFO] uvicorn.access: 127.0.0.1:64195 - "GET /favicon.ico HTTP/1.1" 404
+2024-12-26 16:07:15,996 [INFO] uvicorn.access: 127.0.0.1:64199 - "GET / HTTP/1.1" 404
+2024-12-26 16:07:21,104 [INFO] uvicorn.access: 127.0.0.1:64200 - "GET /app HTTP/1.1" 404
+2024-12-26 16:09:30,628 [INFO] uvicorn.access: 192.168.100.2:58992 - "GET / HTTP/1.1" 404
+2024-12-26 16:09:31,017 [INFO] uvicorn.access: 192.168.100.2:58992 - "GET /favicon.ico HTTP/1.1" 404
+2024-12-26 16:09:57,854 [INFO] uvicorn.error: Shutting down
+2024-12-26 16:09:57,968 [INFO] uvicorn.error: Waiting for application shutdown.
+2024-12-26 16:09:57,978 [INFO] uvicorn.error: Application shutdown complete.
+2024-12-26 16:09:57,980 [INFO] uvicorn.error: Finished server process [14788]
+2024-12-26 16:25:33,584 [INFO] uvicorn.error: Started server process [9760]
+2024-12-26 16:25:33,585 [INFO] uvicorn.error: Waiting for application startup.
+2024-12-26 16:25:33,586 [INFO] uvicorn.error: Application startup complete.
+2024-12-26 16:25:33,588 [INFO] uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2024-12-26 16:25:57,494 [INFO] uvicorn.access: 127.0.0.1:64317 - "GET / HTTP/1.1" 404
+2024-12-26 16:26:05,588 [INFO] uvicorn.access: 127.0.0.1:64319 - "GET /app HTTP/1.1" 307
+2024-12-26 16:26:05,697 [INFO] uvicorn.access: 127.0.0.1:64319 - "GET /app/ HTTP/1.1" 200
+2024-12-26 16:28:05,010 [INFO] uvicorn.access: 127.0.0.1:64342 - "GET /docs HTTP/1.1" 200
+2024-12-26 16:28:05,869 [INFO] uvicorn.access: 127.0.0.1:64346 - "GET /openapi.json HTTP/1.1" 200
+2024-12-26 16:28:56,541 [INFO] uvicorn.access: 127.0.0.1:64350 - "GET /app/ HTTP/1.1" 200
+2024-12-26 16:29:29,706 [INFO] uvicorn.error: Shutting down
+2024-12-26 16:29:29,818 [INFO] uvicorn.error: Waiting for application shutdown.
+2024-12-26 16:29:29,822 [INFO] uvicorn.error: Application shutdown complete.
+2024-12-26 16:29:29,828 [INFO] uvicorn.error: Finished server process [9760]
+2024-12-26 16:31:13,312 [INFO] uvicorn.error: Started server process [2396]
+2024-12-26 16:31:13,314 [INFO] uvicorn.error: Waiting for application startup.
+2024-12-26 16:31:13,315 [INFO] uvicorn.error: Application startup complete.
+2024-12-26 16:31:13,316 [INFO] uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2024-12-26 16:31:17,026 [INFO] uvicorn.error: Shutting down
+2024-12-26 16:31:17,136 [INFO] uvicorn.error: Waiting for application shutdown.
+2024-12-26 16:31:17,137 [INFO] uvicorn.error: Application shutdown complete.
+2024-12-26 16:31:17,137 [INFO] uvicorn.error: Finished server process [2396]
+2024-12-26 19:19:22,156 [INFO] uvicorn.error: Started server process [14560]
+2024-12-26 19:19:22,158 [INFO] uvicorn.error: Waiting for application startup.
+2024-12-26 19:19:22,159 [INFO] uvicorn.error: Application startup complete.
+2024-12-26 19:19:22,161 [INFO] uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2024-12-26 19:19:50,717 [INFO] uvicorn.access: 127.0.0.1:49214 - "GET / HTTP/1.1" 404
+2024-12-26 19:19:50,977 [INFO] uvicorn.access: 127.0.0.1:49214 - "GET /favicon.ico HTTP/1.1" 404
+2024-12-26 19:19:54,376 [INFO] uvicorn.access: 127.0.0.1:49214 - "GET /docs HTTP/1.1" 200
+2024-12-26 19:19:55,087 [INFO] uvicorn.access: 127.0.0.1:49214 - "GET /openapi.json HTTP/1.1" 200
+2024-12-26 19:22:20,076 [INFO] uvicorn.error: Shutting down
+2024-12-26 19:22:20,187 [INFO] uvicorn.error: Waiting for application shutdown.
+2024-12-26 19:22:20,193 [INFO] uvicorn.error: Application shutdown complete.
+2024-12-26 19:22:20,196 [INFO] uvicorn.error: Finished server process [14560]
+2024-12-27 18:01:04,990 [INFO] uvicorn.error: Started server process [1772]
+2024-12-27 18:01:04,991 [INFO] uvicorn.error: Waiting for application startup.
+2024-12-27 18:01:04,992 [INFO] uvicorn.error: Application startup complete.
+2024-12-27 18:01:04,993 [INFO] uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2024-12-27 18:01:17,005 [INFO] uvicorn.access: 127.0.0.1:58026 - "GET / HTTP/1.1" 404
+2024-12-27 18:01:17,315 [INFO] uvicorn.access: 127.0.0.1:58026 - "GET /favicon.ico HTTP/1.1" 404
+2024-12-27 18:01:20,915 [INFO] uvicorn.access: 127.0.0.1:58028 - "GET /docs HTTP/1.1" 200
+2024-12-27 18:01:21,236 [INFO] uvicorn.access: 127.0.0.1:58028 - "GET /openapi.json HTTP/1.1" 200
+2024-12-27 18:02:21,712 [INFO] uvicorn.access: 127.0.0.1:58041 - "POST /units/ HTTP/1.1" 201
+2024-12-27 18:02:34,850 [INFO] uvicorn.access: 127.0.0.1:58042 - "POST /units/ HTTP/1.1" 409
+2024-12-27 18:02:58,229 [INFO] uvicorn.access: 127.0.0.1:58043 - "GET /units/ HTTP/1.1" 200
+2024-12-27 18:03:20,070 [INFO] uvicorn.error: Shutting down
+2024-12-27 18:03:20,179 [INFO] uvicorn.error: Waiting for application shutdown.
+2024-12-27 18:03:20,179 [INFO] uvicorn.error: Application shutdown complete.
+2024-12-27 18:03:20,180 [INFO] uvicorn.error: Finished server process [1772]
+2024-12-30 16:54:40,880 [INFO] uvicorn.error: Started server process [15160]
+2024-12-30 16:54:40,881 [INFO] uvicorn.error: Waiting for application startup.
+2024-12-30 16:54:40,882 [INFO] uvicorn.error: Application startup complete.
+2024-12-30 16:54:40,883 [INFO] uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2024-12-30 16:55:00,718 [INFO] uvicorn.access: 127.0.0.1:51074 - "GET / HTTP/1.1" 404
+2024-12-30 16:55:01,074 [INFO] uvicorn.access: 127.0.0.1:51074 - "GET /favicon.ico HTTP/1.1" 404
+2024-12-30 16:55:06,997 [INFO] uvicorn.access: 127.0.0.1:51076 - "GET /docs HTTP/1.1" 200
+2024-12-30 16:55:07,312 [INFO] uvicorn.access: 127.0.0.1:51077 - "GET /openapi.json HTTP/1.1" 200
+2024-12-30 16:55:38,461 [INFO] uvicorn.access: 127.0.0.1:51078 - "POST /units/ HTTP/1.1" 201
+2024-12-30 16:57:11,383 [INFO] uvicorn.error: Shutting down
+2024-12-30 16:57:11,493 [INFO] uvicorn.error: Waiting for application shutdown.
+2024-12-30 16:57:11,493 [INFO] uvicorn.error: Application shutdown complete.
+2024-12-30 16:57:11,494 [INFO] uvicorn.error: Finished server process [15160]
+2025-01-02 13:29:01,099 [INFO] uvicorn.error: Started server process [4896]
+2025-01-02 13:29:01,100 [INFO] uvicorn.error: Waiting for application startup.
+2025-01-02 13:29:01,101 [INFO] uvicorn.error: Application startup complete.
+2025-01-02 13:29:01,102 [INFO] uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-01-02 13:29:19,281 [INFO] uvicorn.access: 127.0.0.1:61308 - "GET / HTTP/1.1" 404
+2025-01-02 13:29:19,588 [INFO] uvicorn.access: 127.0.0.1:61308 - "GET /favicon.ico HTTP/1.1" 404
+2025-01-02 13:29:23,211 [INFO] uvicorn.access: 127.0.0.1:61308 - "GET /docs HTTP/1.1" 200
+2025-01-02 13:29:23,894 [INFO] uvicorn.access: 127.0.0.1:61308 - "GET /openapi.json HTTP/1.1" 200
+2025-01-02 13:29:54,415 [INFO] uvicorn.access: 127.0.0.1:61312 - "POST /units/ HTTP/1.1" 409
+2025-01-02 13:30:48,310 [INFO] uvicorn.access: 127.0.0.1:61313 - "POST /units/ HTTP/1.1" 409
+2025-01-02 13:31:03,901 [INFO] uvicorn.access: 127.0.0.1:61316 - "POST /units/ HTTP/1.1" 201
+2025-01-02 13:32:45,564 [INFO] uvicorn.access: 127.0.0.1:61320 - "POST /products/ HTTP/1.1" 500
+2025-01-02 13:32:45,566 [ERROR] uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2505, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1005, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\playground\infra\API\products_api.py", line 30, in create_product
+    product = service.create(data)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\playground\core\product.py", line 69, in create
+    self.repository.create(product)
+  File "C:\Users\Achi\patterns2\pythonProject\playground\infra\Memory\SQLlite\sqllite_product_repo.py", line 24, in create
+    self.conn.execute(
+sqlite3.OperationalError: table products has no column named product_name
+2025-01-02 13:34:18,259 [INFO] uvicorn.access: 127.0.0.1:61327 - "POST /products/ HTTP/1.1" 500
+2025-01-02 13:34:18,261 [ERROR] uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2505, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1005, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\playground\infra\API\products_api.py", line 30, in create_product
+    product = service.create(data)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Achi\patterns2\pythonProject\playground\core\product.py", line 69, in create
+    self.repository.create(product)
+  File "C:\Users\Achi\patterns2\pythonProject\playground\infra\Memory\SQLlite\sqllite_product_repo.py", line 24, in create
+    self.conn.execute(
+sqlite3.OperationalError: table products has no column named product_name
+2025-01-02 13:37:47,134 [INFO] uvicorn.error: Shutting down
+2025-01-02 13:37:47,242 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-01-02 13:37:47,259 [INFO] uvicorn.error: Application shutdown complete.
+2025-01-02 13:37:47,263 [INFO] uvicorn.error: Finished server process [4896]
+2025-01-02 13:45:08,200 [INFO] uvicorn.error: Started server process [7628]
+2025-01-02 13:45:08,201 [INFO] uvicorn.error: Waiting for application startup.
+2025-01-02 13:45:08,202 [INFO] uvicorn.error: Application startup complete.
+2025-01-02 13:45:08,202 [INFO] uvicorn.error: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-01-02 13:45:29,710 [INFO] uvicorn.access: 127.0.0.1:61352 - "POST /units/ HTTP/1.1" 201
+2025-01-02 13:47:53,130 [INFO] uvicorn.access: 127.0.0.1:61355 - "POST /products/ HTTP/1.1" 201
+2025-01-02 13:52:01,662 [INFO] uvicorn.access: 127.0.0.1:61359 - "POST /receipts/ HTTP/1.1" 201
+2025-01-02 13:53:21,327 [INFO] uvicorn.access: 127.0.0.1:61361 - "POST /receipts/f6493af6-2a83-3c02-920d-4e3e13781b57/products HTTP/1.1" 201
+2025-01-02 13:54:24,594 [INFO] uvicorn.access: 127.0.0.1:61363 - "GET /receipts/f6493af6-2a83-3c02-920d-4e3e13781b57 HTTP/1.1" 200
+2025-01-02 13:54:52,410 [INFO] uvicorn.error: Shutting down
+2025-01-02 13:54:52,528 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-01-02 13:54:52,531 [INFO] uvicorn.error: Application shutdown complete.
+2025-01-02 13:54:52,533 [INFO] uvicorn.error: Finished server process [7628]

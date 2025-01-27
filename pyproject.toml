@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "pythonproject"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+coverage = "^7.6.1"
+httpx = "^0.27.2"
+python-dotenv = "^1.0.1"
+pytest-vcr = "^1.0.2"
+apexdevkit = "^1.16.3"
+fastapi = "^0.115.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+
+[tool.poetry.group.lint.dependencies]
+mypy = "*"
+ruff = "*"
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+files = ["./"]
+strict = true
+
+[tool.ruff]
+target-version = "py312"
+
+lint.select = ["E", "F", "I"]
+lint.ignore = []
+lint.fixable = ["A", "B", "C", "D", "E", "F", "I"]
+lint.unfixable = []
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.coverage.run]
+branch = true
+source = []
+
+[tool.coverage.report]
+skip_empty = true
+skip_covered = true
+show_missing = true
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
