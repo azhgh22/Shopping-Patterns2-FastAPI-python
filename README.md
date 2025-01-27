@@ -1,0 +1,1 @@
+# Shopping-Patterns2-FastAPI-python
