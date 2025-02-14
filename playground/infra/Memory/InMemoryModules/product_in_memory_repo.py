@@ -32,7 +32,9 @@ class ProductInMemoryRepository:
 
         return None
 
-    def update(self, prod_id: str, price: int) -> None:
+    def update(self, prod_id: str, price: int) -> bool:
         prod = self.__get_in_memory_product_with_id(prod_id)
         if prod is not None:
             prod.price = price
+            return True
+        return False

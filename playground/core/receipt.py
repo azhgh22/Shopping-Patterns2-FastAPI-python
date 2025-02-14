@@ -129,7 +129,8 @@ class ReceiptService:
         self, info: AddProductInput, product_service: IProductService
     ) -> dict[str, Any] | None:
         prod = product_service.get(info.product_id)
-        if prod is None:
+        receipt = self.repository.get_receipt(info.receipt_id)
+        if prod is None or receipt is None or receipt.status == "closed":
             return None
         if not self.repository.receipt_has_product(info.product_id, info.receipt_id):
             self.__add_new_product(prod, info)

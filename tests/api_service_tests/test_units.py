@@ -18,10 +18,15 @@ class TestUnits:
     def test_environment_works(self) -> None:
         pass
 
-    def test_should_read_empty_list_of_units(self, http: TestClient) -> None:
-        response = http.get("/units")
-        assert response.status_code == 200
-        assert response.json() == []
+    def test_service_should_return_none_as_there_is_not_the_object(self) -> None:
+        service = UnitService(UnitInMemoryRepository())
+        assert service.get_unit("1") is None
+
+    def test_service_should_return_unit(self) -> None:
+        unit_list = [Unit("1", "a")]
+        service = UnitService(UnitInMemoryRepository(unit_list))
+        ret_val = service.get_unit("1")
+        assert ret_val is not None and ret_val.name == unit_list[0].name
 
     def test_should_return_404_http(self, http: TestClient) -> None:
         unit_id = 1234
@@ -29,17 +34,23 @@ class TestUnits:
         assert response.status_code == 404
         assert response.json()["detail"] == f"Unit with id<{unit_id}> does not exist."
 
+    ########### Create
+
+    def test_service_should_not_create_new_unit_as_it_already_exists(self) -> None:
+        service = UnitService(UnitInMemoryRepository([Unit("1", "a")]))
+        assert service.create_unit("a") is None
+
+    def test_unit_service_should_add_new_unit(self) -> None:
+        unit_list: list[Unit] = []
+        unit_service = UnitService(UnitInMemoryRepository(unit_list))
+        new_unit = unit_service.create_unit("free uni")
+        assert new_unit is not None and unit_list[0].name == new_unit.name
+
     def test_should_create_new_unit(self, http: TestClient) -> None:
         new_unit = {"name": "kg"}
         response = http.post("/units", json=new_unit)
         assert response.status_code == 201
         assert response.json() == {"id": ANY, **new_unit}
-
-    def test_service_should_return_unit(self) -> None:
-        unit_list = [Unit("1", "a")]
-        service = UnitService(UnitInMemoryRepository(unit_list))
-        ret_val = service.get_unit("1")
-        assert ret_val is not None and ret_val.name == unit_list[0].name
 
     def test_should_persist_new_unit(self, http: TestClient) -> None:
         new_unit = {"name": "kg"}
@@ -48,13 +59,9 @@ class TestUnits:
         assert response.status_code == 200
         assert response.json() == {"id": unit_id, **new_unit}
 
-    def test_unit_service_should_add_new_unit(self) -> None:
-        unit_list: list[Unit] = []
-        unit_service = UnitService(UnitInMemoryRepository(unit_list))
-        new_unit = unit_service.create_unit("free uni")
-        assert new_unit is not None and unit_list[0].name == new_unit.name
-
-    def test_should_return_409_error(self, http: TestClient) -> None:
+    def test_should_return_409_error_while_persisting_unit(
+        self, http: TestClient
+    ) -> None:
         unit = {"name": "kg"}
         http.post("/units", json=unit)
         response = http.post("/units", json=unit)
@@ -63,6 +70,12 @@ class TestUnits:
             response.json()["detail"]
             == f"Unit with name {unit["name"]} already exists."
         )
+
+    ######## Get All
+
+    def test_service_should_return_empty_list_of_units(self) -> None:
+        service = UnitService(UnitInMemoryRepository([]))
+        assert len(service.get_all_units()) == 0
 
     def test_service_should_return_all_units(self) -> None:
         unit_list = [Unit("1", "a")]
@@ -79,3 +92,8 @@ class TestUnits:
         response = http.get("/units")
         assert response.status_code == 200
         assert len(response.json()) == 2
+
+    def test_should_read_empty_list_of_units(self, http: TestClient) -> None:
+        response = http.get("/units")
+        assert response.status_code == 200
+        assert response.json() == []

@@ -51,5 +51,10 @@ class ProductSqlLiteRepository:
             return None
         return product_list[0]
 
-    def update(self, prod_id: str, price: int) -> None:
-        pass
+    def update(self, prod_id: str, price: int) -> bool:
+        updated_rows = self.conn.execute(f"""
+            update products
+            set price={price}
+            where id = {prod_id}
+        """).rowcount
+        return updated_rows==1

@@ -54,7 +54,6 @@ def add_product(receipt_id: str, info: AddModel, request: Request) -> dict[str, 
     receipt = service.add_product(
         AddProductInput(info.id, info.quantity, receipt_id), get_product_core(request)
     )
-    print(info.id, info.quantity, receipt_id)
     if receipt is None:
         raise HTTPException(status_code=404, detail="Receipt or Product not found")
 

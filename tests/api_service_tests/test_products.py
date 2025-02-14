@@ -15,20 +15,51 @@ class TestProduct:
     def http(self) -> TestClient:
         return TestClient(setup(MemoryType.IN_MEMORY))
 
-    def test_should_read_empty_list_of_products(self, http: TestClient) -> None:
-        response = http.get("/products")
-        assert response.status_code == 200
-        assert response.json() == []
+    def test_service_should_get_none(self) -> None:
+        service = ProductService(ProductInMemoryRepository())
+        assert service.get("1") is None
 
-    def test_should_return_return_404_error(self, http: TestClient) -> None:
-        product_id = 123
-        response = http.get(f"/products/{product_id}")
-        assert response.status_code == 404
+    def test_service_should_return_product(self) -> None:
+        product_list = [Product("1", "2", "3", "4", 5)]
+        product_service = ProductService(ProductInMemoryRepository(product_list))
+        assert product_service.get("1") == product_list[0]
+
+    def test_service_should_not_create_unit_as_its_barcode_already_exists(self) -> None:
+        product_list = [Product("1", "2", "3", "4", 5)]
+        product_service = ProductService(ProductInMemoryRepository(product_list))
         assert (
-            response.json()["detail"]
-            == f"Product with id<{product_id}> does not exist."
+            product_service.create(ProductCreateRequestModel("2", "33", "4", 5)) is None
         )
 
+    def test_service_should_create_store_products(self) -> None:
+        product_list: list[Product] = []
+        product_service = ProductService(ProductInMemoryRepository(product_list))
+        product_service.create(ProductCreateRequestModel("1", "2", "3", 4))
+        assert product_list[0].name == "2"
+
+    def test_service_should_return_empty_list(self) -> None:
+        service = ProductService(ProductInMemoryRepository())
+        assert service.get_all() == []
+
+    def test_service_should_return_all_products(self) -> None:
+        product_list = [Product("0", "1", "2", "3", 4)]
+        response_list = ProductService(
+            ProductInMemoryRepository(product_list)
+        ).get_all()
+        assert len(response_list) == len(product_list)
+        assert response_list[0].name == product_list[0].name
+
+    def test_service_should_update_product_price(self) -> None:
+        product_list = [Product("0", "1", "2", "3", 4)]
+        product_service = ProductService(ProductInMemoryRepository(product_list))
+        assert product_service.update("0", 20)
+        assert product_list[0].price == 20
+
+    def test_service_should_not_update_product_price(self) -> None:
+        product_service = ProductService(ProductInMemoryRepository())
+        assert not product_service.update("0", 20)
+
+    ##################
     def test_should_create_new_product(self, http: TestClient) -> None:
         new_product = {
             "unit_id": "27b4f218-1cc2-4694-b131-ad481dc08901",
@@ -74,13 +105,19 @@ class TestProduct:
             == f"Product with barcode<{new_product["barcode"]}> already exists."
         )
 
-    def test_service_should_return_all_products(self) -> None:
-        product_list = [Product("0", "1", "2", "3", 4)]
-        response_list = ProductService(
-            ProductInMemoryRepository(product_list)
-        ).get_all()
-        assert len(response_list) == len(product_list)
-        assert response_list[0].name == product_list[0].name
+    def test_should_return_return_404_error(self, http: TestClient) -> None:
+        product_id = 123
+        response = http.get(f"/products/{product_id}")
+        assert response.status_code == 404
+        assert (
+            response.json()["detail"]
+            == f"Product with id<{product_id}> does not exist."
+        )
+
+    def test_should_read_empty_list_of_products(self, http: TestClient) -> None:
+        response = http.get("/products")
+        assert response.status_code == 200
+        assert response.json() == []
 
     def test_should_return_all_products(self, http: TestClient) -> None:
         new_product = {
@@ -97,17 +134,10 @@ class TestProduct:
         assert response.status_code == 200
         assert len(response.json()) == 2
 
-    def test_should_create_store_products(self) -> None:
-        product_list: list[Product] = []
-        product_service = ProductService(ProductInMemoryRepository(product_list))
-        product_service.create(ProductCreateRequestModel("1", "2", "3", 4))
-        assert product_list[0].name == "2"
-
-    def test_should_update_product_price(self) -> None:
-        product_list = [Product("0", "1", "2", "3", 4)]
-        product_service = ProductService(ProductInMemoryRepository(product_list))
-        product_service.update("0", 20)
-        assert product_list[0].price == 20
+    def test_should_get_http_error_409(self, http: TestClient) -> None:
+        res = http.patch(f"/products/{0}", json={"price": 20})
+        assert res.status_code == 409
+        assert res.json()["detail"] == f"Product with id<{0}> does not exist."
 
     def test_should_update_existing_product(self, http: TestClient) -> None:
         new_product = {

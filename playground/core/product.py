@@ -25,7 +25,7 @@ class ProductRepository(Protocol):
     def get_with_barcode(self, barcode: str) -> Product | None:
         pass
 
-    def update(self, prod_id: str, price: int) -> None:
+    def update(self, prod_id: str, price: int) -> bool:
         pass
 
 
@@ -77,7 +77,4 @@ class ProductService:
         return prod
 
     def update(self, prod_id: str, price: int) -> bool:
-        if self.repository.get(prod_id) is None:
-            return False
-        self.repository.update(prod_id, price)
-        return True
+        return self.repository.update(prod_id, price)
